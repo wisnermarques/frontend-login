@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
 function Registro() {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
@@ -31,8 +34,12 @@ function Registro() {
   };
 
   return (
+    <>
+    <Header />
+   
     <div className="container mt-3 animate__animated animate__fadeIn">
       <h2 className="text-center">Registro</h2>
+      
       <form className="bg-light p-4 mx-auto my-3">
         <div className="mb-3">
           <label htmlFor="nome" className="form-label">
@@ -82,6 +89,8 @@ function Registro() {
         </p>
       </form>
     </div>
+    <Footer />
+    </>
   );
 }
 

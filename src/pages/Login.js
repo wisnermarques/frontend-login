@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -88,6 +89,7 @@ function Login() {
           </p>
         </form>
       </div>
+      <Footer />
     </>
   );
 }
