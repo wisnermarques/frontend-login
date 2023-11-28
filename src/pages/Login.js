@@ -9,6 +9,7 @@ function Login() {
   const [error, setError] = useState(null);
 
   const navigate = useNavigate();
+
   const { signin } = useAuth();
 
   const handleLogin = async (event) => {
@@ -19,7 +20,6 @@ function Login() {
         email: username,
         senha: password,
       });
-
       setUsername("");
       setPassword("");
       setError(null); // Limpar erros se o login for bem-sucedido
@@ -43,7 +43,7 @@ function Login() {
         <form className="bg-light p-4 mx-auto my-3">
           <div className="mb-3">
             <label htmlFor="username" className="form-label">
-              Nome de Usuário:
+             E-mail:
             </label>
             <div className="input-group">
               <span className="input-group-text">
