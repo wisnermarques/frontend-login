@@ -3,6 +3,9 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Header from "../components/Header";
 
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
 function Registro() {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
