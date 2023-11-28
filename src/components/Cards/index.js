@@ -21,7 +21,7 @@ function Cards({ persons, handleDelete }) {
 
   const urlBase = 'http://localhost:3001/images/'
 
-  const confirmDelete = (id) => {
+  const confirmDelete = () => {
     if (taskIdToDelete !== null) {
       handleDelete(taskIdToDelete)
       closeConfirmation()
