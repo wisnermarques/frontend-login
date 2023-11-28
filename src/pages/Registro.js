@@ -34,7 +34,7 @@ function Registro() {
   };
 
   return (
-    <>
+    <div className='d-flex flex-column min-vh-100'>
     <Header />
    
     <div className="container mt-3 animate__animated animate__fadeIn">
@@ -90,7 +90,7 @@ function Registro() {
       </form>
     </div>
     <Footer />
-    </>
+    </div>
   );
 }
 

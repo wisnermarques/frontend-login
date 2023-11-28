@@ -34,7 +34,7 @@ function Login() {
   };
 
   return (
-    <>
+    <div className='d-flex flex-column min-vh-100'>
       <Header />
 
       <div className="container mt-3 animate__animated animate__fadeIn">
@@ -90,7 +90,7 @@ function Login() {
         </form>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

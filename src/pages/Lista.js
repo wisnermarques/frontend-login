@@ -121,9 +121,9 @@ function Home() {
   }
 
   return (
-    <>
+    <div className='d-flex flex-column min-vh-100'>
       <Header />
-      <div>
+      <main className='flex-grow-1'>
         <div className='container animate__animated animate__fadeIn'>
           <h2 className='mt-2'>Listar e Cadastrar Pessoas</h2>
           {error ? (
@@ -208,9 +208,9 @@ function Home() {
             </>
           )}
         </div>
-      </div>
+      </main>
       <Footer />
-    </>
+    </div>
   )
 }
 

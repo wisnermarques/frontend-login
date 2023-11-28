@@ -2,7 +2,7 @@ import './index.css'
 
 function Footer() {
   return (
-    <footer className='mt-auto py-3 bg-dark fixed-bottom'>
+    <footer className='mt-auto py-3 bg-dark'>
       <div className='container text-center'>
         <a
           href='https://pt-br.facebook.com/'
