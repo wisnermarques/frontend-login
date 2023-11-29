@@ -19,22 +19,25 @@ function Editar() {
   const [fotoAntiga, setFotoAntiga] = useState(null) // Adicionando estado para a prévia da imagem
 
   useEffect(() => {
-    personService.getOne(id).then((response) => {
-      setNome(response.data.nome)
-      setNumero(response.data.numero)
-      setEmail(response.data.email)
-      setEndereco(response.data.endereco)
+    personService
+      .getOne(id)
+      .then((response) => {
+        setNome(response.data.nome)
+        setNumero(response.data.numero)
+        setEmail(response.data.email)
+        setEndereco(response.data.endereco)
 
-      // Formate a data no formato dd/mm/yyyy
-      const formattedDate = new Date(
-        response.data.data_nascimento
-      ).toLocaleDateString('pt-BR')
-      setDataNascimento(formattedDate)
+        // Formate a data no formato dd/mm/yyyy
+        const formattedDate = new Date(
+          response.data.data_nascimento
+        ).toLocaleDateString('pt-BR')
+        setDataNascimento(formattedDate)
 
-      setFoto(response.data.foto)
-      setFotoAntiga('http://localhost:3001/images/' + foto)
-    })
-  }, [id, foto])
+        setFoto(response.data.foto)
+        setFotoAntiga('http://localhost:3001/images/' + foto)
+      })
+      .catch((err) => navigate('/home'))
+  }, [id, foto, navigate])
 
   const handleNomeChange = (event) => {
     // console.log(event.target.value);
@@ -105,7 +108,7 @@ function Editar() {
 
     await personService.update(id, personObject)
 
-    navigate('/')
+    navigate('/lista')
   }
 
   const cancel = () => {
@@ -119,7 +122,10 @@ function Editar() {
         <div className='container animate__animated animate__fadeIn'>
           <h2>Edição de Dados</h2>
           <hr />
-          <form onSubmit={editPerson} className='bg-success-subtle p-2 form-control'>
+          <form
+            onSubmit={editPerson}
+            className='bg-success-subtle p-2 form-control'
+          >
             <Input
               textLabel='nome'
               text='Nome'
