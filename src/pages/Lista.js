@@ -8,7 +8,7 @@ import Header from '../components/Header'
 import Input from '../components/Input'
 import Cards from '../components/Cards'
 
-function Home() {
+function Lista() {
   const [persons, setPersons] = useState([])
   const [nome, setNome] = useState('')
   const [numero, setNumero] = useState('')
@@ -214,4 +214,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Lista

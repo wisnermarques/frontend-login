@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Header from "../components/Header";
 
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 function Registro() {
@@ -37,7 +36,7 @@ function Registro() {
   };
 
   return (
-    <>
+    <div className='d-flex flex-column min-vh-100'>
       <Header />
       <div className="container mt-3 animate__animated animate__fadeIn">
         <h2 className="text-center">Registro</h2>
@@ -91,7 +90,8 @@ function Registro() {
           </p>
         </form>
       </div>
-    </>
+      <Footer />
+    </div>
   );
 }
 
