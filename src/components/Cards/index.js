@@ -77,12 +77,19 @@ function Cards({ persons, handleDelete }) {
         ))
       )}
 
+      {/* Janela de alerta centralizada */}
       {taskIdToDelete !== null && (
-        <div className='modal'>
-          <div className='modal-content'>
-            <h4>Realmente deseja excluir?</h4>
-            <button onClick={confirmDelete}>Sim</button>
-            <button onClick={cancelDelete}>Cancelar</button>
+        <div className='alert-overlay'>
+          <div className='alert bg-light p-4 rounded'>
+            <h4 className='mb-4'>Realmente deseja excluir?</h4>
+            <div className='button-group'>
+              <button className='btn btn-danger' onClick={confirmDelete}>
+                Sim
+              </button>
+              <button className='btn btn-secondary' onClick={cancelDelete}>
+                Cancelar
+              </button>
+            </div>
           </div>
         </div>
       )}

@@ -63,49 +63,55 @@
   color: #555;
 }
 
-/* modal confirmação exclusão.css */
-
-.modal {
+/* Estilos para melhorar a aparência da janela de alerta */
+.alert-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9999;
-  /* Garante que o modal esteja acima do restante do conteúdo */
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro transparente */
 }
 
-.modal-content {
-  background-color: white;
-  border-radius: 8px;
+.alert {
+  background-color: #fff;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+  max-width: 300px;
 }
 
-.modal-content p {
-  margin: 0;
-  margin-bottom: 20px;
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-.modal-content button {
-  margin: 0 10px;
+.btn {
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
 }
 
-.modal-content button:first-child {
+.btn-confirm {
   background-color: #dc3545;
-  color: white;
+  color: #fff;
 }
 
-.modal-content button:last-child {
-  background-color: #ccc;
-  color: black;
+.btn-cancel {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn:hover {
+  filter: brightness(1.2);
 }
