@@ -6,9 +6,9 @@ import axios from 'axios'
 //   token = `Bearer ${newToken}`
 // }
 
-const urlBase = 'http://localhost:3001/api/persons'
+const urlBase = '/api/persons'
 
-const urlLogin = 'http://localhost:3001/api/user/login'
+const urlLogin = '/api/user/login'
 
 const getAll = () => axios.get(urlBase)
 

@@ -6,7 +6,7 @@ export const AuthContext = createContext({})
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState()
 
-  const urlLogin = 'http://localhost:3001/api/users/login'
+  const urlLogin = 'api/users/login'
 
   const signin = async (credentials) => {
     const response = await axios.post(urlLogin, credentials)

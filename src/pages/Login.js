@@ -34,17 +34,19 @@ function Login() {
   };
 
   return (
-    <div className='d-flex flex-column min-vh-100'>
+    <div className="d-flex flex-column min-vh-100">
       <Header />
 
       <div className="container mt-3 animate__animated animate__fadeIn">
         <h2 className="text-center">Login</h2>
-        {error && <div className="alert alert-danger">{error}</div>}
+        {error && (
+          <div className="container alert alert-danger mx-auto">{error}</div>
+        )}
 
         <form className="bg-light p-4 mx-auto my-3">
           <div className="mb-3">
             <label htmlFor="username" className="form-label">
-             E-mail:
+              E-mail:
             </label>
             <div className="input-group">
               <span className="input-group-text">

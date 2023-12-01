@@ -22,7 +22,7 @@ function Cards({ persons, handleDelete }) {
     setTaskIdToDelete(null) // Limpa o ID do item a ser deletado
   }
 
-  const urlBase = 'http://localhost:3001/images/'
+  const urlBase = '/images/'
 
   return (
     <div className='row mb-2'>

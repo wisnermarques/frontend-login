@@ -41,7 +41,6 @@
   margin-top: 10px;
 }
 
-/* styles.css */
 /* Estilizando os links */
 .card-text a {
   text-decoration: none;
@@ -90,16 +89,6 @@
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
-}
-
-.btn {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease;
 }
 
 .btn-confirm {
